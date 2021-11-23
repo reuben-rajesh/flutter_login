@@ -10,6 +10,7 @@ import 'package:flutter/scheduler.dart' show timeDilation;
 import 'package:flutter_login/src/models/login_user_type.dart';
 import 'package:flutter_login/src/models/term_of_service.dart';
 import 'package:flutter_login/src/models/user_form_field.dart';
+import 'package:flutter_login/src/widgets/login_bg.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_signin_button/button_list.dart';
 
@@ -759,6 +760,9 @@ class _FlutterLoginState extends State<FlutterLogin>
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
             ),
+            Visibility(
+                child: LoginBackground(arcColorList: loginTheme.arcColorList),
+                visible: loginTheme.showArc),
             SingleChildScrollView(
               child: Theme(
                 data: theme,

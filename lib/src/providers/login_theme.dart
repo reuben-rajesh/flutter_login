@@ -59,7 +59,9 @@ class LoginTheme with ChangeNotifier {
       this.providerButtonPadding,
       this.footerBottomPadding = 0,
       this.logoWidth,
-      this.primaryColorAsInputLabel = false});
+      this.primaryColorAsInputLabel = false,
+      this.arcColorList = const [Colors.blueGrey, Colors.black87],
+      this.showArc = true});
 
   /// The background color of the login page for light gradient; if provided,
   /// overrides the [primaryColor] for page background
@@ -135,4 +137,10 @@ class LoginTheme with ChangeNotifier {
 
   /// Set to true if you want to use the primary color for input labels.
   final bool primaryColorAsInputLabel;
+
+  /// Set the Arc gradient color shown in the top
+  final List<Color> arcColorList;
+
+  /// Set to true if the Arc needs to be shown in the background
+  final bool showArc;
 }
